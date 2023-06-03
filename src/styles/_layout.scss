@@ -1,0 +1,123 @@
+body {
+	background-color: $background-color;
+}
+/*----------------------*/
+header,
+footer {
+	.page-home & {
+		background-color: $page-home-color;
+	}
+	.page-works & {
+		background-color: $page-works-color;
+	}
+	.page-skills & {
+		background-color: $page-skills-color;
+	}
+	.page-about & {
+		background-color: $page-about-color;
+	}
+	.page-contact & {
+		background-color: $page-contact-color;
+	}
+}
+/*-----------------------*/
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+header {
+	.head-section {
+		padding: 20px 20px 0px;
+		text-align: center;
+		.logo-wrapper {
+			img {
+				max-width: fit-content;
+				width: 100%;
+			}
+		}
+	}
+}
+.super-wrapper {
+	padding: 10px 0;
+}
+
+footer {
+	border-top: 1px solid rgba(255, 255, 255, 0.4);
+	padding: 10px;
+	font-size: 14px;
+	/*
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    */
+}
+footer a.my-email {
+	color: #fff;
+	text-decoration: none;
+	opacity: 0.9;
+}
+/*-------------- Navbar -------------*/
+.navbar-main {
+	background-color: transparent !important;
+	border: 0 none;
+	margin-bottom: 0px;
+	font-size: 14px;
+	.navbar-collapse {
+		border: 0 none;
+		-webkit-box-shadow: 0 0 0 0 inset;
+		box-shadow: 0 0 0 0 inset;
+		margin-top: 5px;
+		.navbar-nav {
+			margin: auto;
+			& > li {
+				display: flex;
+				justify-content: center;
+				margin: 5px 10px;
+				& > a {
+					color: #fff;
+					opacity: 0.5;
+					font-weight: bold;
+					padding: 0px 6px;
+					border-bottom: 2px solid transparent;
+					&:focus,
+					&:hover {
+						background-color: unset;
+						color: #fff;
+						opacity: 1;
+						border-bottom-color: #fff;
+					}
+				}
+				&.active {
+					a,
+					a:focus,
+					a:hover {
+						color: #fff;
+						opacity: 1;
+						border-bottom-color: #fff;
+						background-color: unset;
+					}
+				}
+			}
+		}
+	}
+	.navbar-toggler {
+		margin: auto;
+		border: 2px solid transparent !important;
+		border-radius: 0;
+		padding: 3px;
+		&-icon {
+			width: 30px;
+			height: 27px;
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='3' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+		}
+		&:focus,
+		&:hover {
+			border-color: #fff !important;
+			background-color: unset;
+			box-shadow: none;
+		}
+	}
+}
+/*-----------------------------------*/

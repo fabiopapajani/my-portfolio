@@ -1,133 +1,12 @@
-body {
-	background-color: #f7f4f4;
-}
-/*----------------------*/
-header,
-footer {
-	.page-home & {
-		background-color: #9399cc;
-	}
-	.page-works & {
-		background-color: #df6d51;
-	}
-	.page-skills & {
-		background-color: #4e95ff;
-	}
-	.page-about & {
-		background-color: #4dc2b9;
-	}
-	.page-contact & {
-		background-color: #f5ca65;
-	}
-}
-/*-----------------------*/
-/* Medium Devices, Desktops */
-@media only screen and (min-width: 992px) {
-	.container {
-		width: 970px;
-	}
-}
-header {
-	.head-section {
-		padding: 20px 20px 0px;
-		text-align: center;
-		.logo-wrapper {
-			img {
-				max-width: fit-content;
-				width: 100%;
-			}
-		}
-	}
-}
-.super-wrapper {
-	padding: 10px 0;
-}
-
-footer {
-	border-top: 1px solid rgba(255, 255, 255, 0.4);
-	padding: 10px;
-	font-size: 14px;
-	/*
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-    */
-}
-footer a.my-email {
-	color: #fff;
-	text-decoration: none;
-	opacity: 0.9;
-}
-/*-------------- Navbar -------------*/
-.navbar-main {
-	background-color: transparent !important;
-	border: 0 none;
-	margin-bottom: 0px;
-	font-size: 14px;
-	.navbar-collapse {
-		border: 0 none;
-		-webkit-box-shadow: 0 0 0 0 inset;
-		box-shadow: 0 0 0 0 inset;
-		margin-top: 5px;
-		.navbar-nav {
-			margin: auto;
-			& > li {
-				display: flex;
-				justify-content: center;
-				margin: 5px 10px;
-				& > a {
-					color: #fff;
-					opacity: 0.5;
-					font-weight: bold;
-					padding: 0px 6px;
-					border-bottom: 2px solid transparent;
-					&:focus,
-					&:hover {
-						background-color: unset;
-						color: #fff;
-						opacity: 1;
-						border-bottom-color: #fff;
-					}
-				}
-				&.active {
-					a,
-					a:focus,
-					a:hover {
-						color: #fff;
-						opacity: 1;
-						border-bottom-color: #fff;
-						background-color: unset;
-					}
-				}
-			}
-		}
-	}
-	.navbar-toggler {
-		margin: auto;
-		border: 2px solid transparent !important;
-		border-radius: 0;
-		padding: 3px;
-		&-icon {
-			width: 30px;
-			height: 27px;
-			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='3' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-		}
-		&:focus,
-		&:hover {
-			border-color: #fff !important;
-			background-color: unset;
-			box-shadow: none;
-		}
-	}
-}
-/*-----------------------------------*/
+@import './variables';
+@import './layout';
 
 /*------------- Helpers -------------*/
-.centred {
-	margin-left: auto;
-	margin-right: auto;
-	float: none;
-}
+// .centred {
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	float: none;
+// }
 .icon-frontend {
 	background-image: url('/assets/img/frontend.png');
 	width: 150px;
@@ -153,18 +32,19 @@ footer a.my-email {
 /*-----------------------------------*/
 
 /*------------- Home ----------------*/
-.page-home #main .quote {
-	font-size: 25px;
-	margin: 20px 0px;
+.page-home {
+	.quote {
+		font-size: 25px;
+		margin: 20px 0px;
+	}
+	.description-wrapper {
+		margin-top: 20px;
+	}
+	.description {
+		font-size: 16px;
+		line-height: 25px;
+	}
 }
-.page-home #main .description-wrapper {
-	margin-top: 20px;
-}
-.page-home #main .description {
-	font-size: 16px;
-	line-height: 25px;
-}
-/* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
 	.page-home footer {
 		margin-top: 30px;
@@ -172,102 +52,131 @@ footer a.my-email {
 }
 /*-----------------------------------*/
 /*------------- Works ---------------*/
-.page-works a {
-	color: #df6d51;
+.page-works {
+	a {
+		color: $page-works-color;
+	}
+	.project {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	hr {
+		border: 2px solid $page-works-color;
+		opacity: 1;
+	}
+	.btn.btn-read-more {
+		background-color: $page-works-color;
+		border-radius: 0;
+		color: #fff;
+		font-weight: bold;
+		border: 2px solid $page-works-color;
+		padding: 4px 8px;
+	}
+	.btn.btn-read-more:hover {
+		background-color: $background-color;
+		color: $page-works-color;
+	}
 }
-.page-works .project {
-	margin-top: 15px;
-	margin-bottom: 15px;
-}
-.page-works hr {
-	border: 2px solid #df6d51;
-}
-.page-works .btn.btn-read-more {
-	background-color: #df6d51;
-	border-radius: 0;
-	color: #fff;
-	font-weight: bold;
-	border: 2px solid #df6d51;
-	padding: 4px 8px;
-}
-.page-works .btn.btn-read-more:hover {
-	background-color: #f7f4f4;
-	color: #df6d51;
-}
+
 /*-----------------------------------*/
 /*------------- Skills --------------*/
-.page-skills .skill-rate-row {
-	font-size: 20px;
-}
-.page-skills .skill-rate-row .title {
-	font-weight: bold;
-	display: inline-block;
-	min-width: 167px;
-	margin-right: 10px;
-}
-.page-skills .skill-rate-row .starts {
-	font-size: 25px;
+.page-skills {
+	.skill-rate-row {
+		font-size: 20px;
+	}
+	.skill-rate-row .title {
+		font-weight: bold;
+		display: inline-block;
+		min-width: 167px;
+		margin-right: 10px;
+		text-align: right;
+	}
+	.skill-rate-row .starts {
+		font-size: 25px;
+	}
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-	.page-skills .skill-rate-row .title {
-		min-width: 130px;
-	}
-	.page-skills .skill-rate-row {
-		font-size: 15px;
-	}
-	.page-skills .skill-rate-row .starts {
-		font-size: 20px;
+	.page-skills {
+		.skill-rate-row .title {
+			min-width: 130px;
+		}
+		.skill-rate-row {
+			font-size: 15px;
+		}
+		.skill-rate-row .starts {
+			font-size: 20px;
+		}
 	}
 }
 /*-----------------------------------*/
 /*------------- About ---------------*/
-.page-about #about_me .description {
-	font-size: 16px;
+.page-about {
+	.image-wrapper {
+		width: 300px;
+		height: 300px;
+		overflow: hidden;
+		margin: auto;
+		img {
+			margin-left: -15px;
+			margin-top: -87px;
+			max-width: 104%;
+		}
+	}
+	#about_me .description {
+		font-size: 16px;
+	}
+	#details .ul-details {
+		font-size: 16px;
+	}
+	#details .ul-details li {
+		margin-bottom: 5px;
+	}
+	#details .ul-details .li-title {
+		margin-right: 10px;
+	}
+	.table {
+		th,
+		td {
+			width: 50%;
+		}
+	}
 }
-.page-about #details .ul-details {
-	font-size: 16px;
-}
-.page-about #details .ul-details li {
-	margin-bottom: 5px;
-}
-.page-about #details .ul-details .li-title {
-	margin-right: 10px;
-}
+
 @media only screen and (max-width: 992px) {
-	.page-about #about_me .description {
-		text-align: center;
+	.page-about {
+		.page-about #about_me .description {
+			text-align: center;
+		}
+		.page-about #details .ul-details {
+			text-align: center;
+		}
 	}
-	.page-about #details .ul-details {
-		text-align: center;
-	}
-}
-.page-about .table > tbody > tr > td,
-.page-about .table > tbody > tr > th,
-.page-about .table > tfoot > tr > td,
-.page-about .table > tfoot > tr > th,
-.page-about .table > thead > tr > td,
-.page-about .table > thead > tr > th {
-	width: 50%;
 }
 /*-----------------------------------*/
 /*------------ Contact --------------*/
-.page-contact #main {
-	padding-top: 20px;
-	padding-bottom: 20px;
+.page-contact {
+	#main {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	#contact-form input,
+	#contact-form textarea,
+	#contact-form button {
+		border-radius: 0px;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+	}
+	#contact-form textarea {
+		min-height: 150px;
+	}
+	.form-control:focus {
+		border-color: $page-contact-color;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 202, 101, 0.6);
+		outline: 0 none;
+	}
 }
-.page-contact #contact-form input,
-.page-contact #contact-form textarea,
-.page-contact #contact-form button {
-	border-radius: 0px;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-}
-.page-contact .form-control:focus {
-	border-color: #f5ca65;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 202, 101, 0.6);
-	outline: 0 none;
-}
+
 /*-----------------------------------*/
 
 /*------------- Jobs ----------------*/
