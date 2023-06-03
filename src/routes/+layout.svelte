@@ -31,7 +31,7 @@
 					<div class="col-sm-12">
 						<div class="logo-wrapper text-center">
 							<a href="/">
-								<img id="logo" class="img-responsive centred" src={logo} alt="logo" />
+								<img class="img-responsive centred" src={logo} alt="logo" />
 							</a>
 						</div>
 					</div>
@@ -42,7 +42,7 @@
 			<NavbarToggler color="light" on:click={() => (isOpen = !isOpen)} />
 			<Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
 				<Nav class="ms-auto" navbar>
-					<NavItem>
+					<NavItem active>
 						<NavLink href="/">WHAT I DO</NavLink>
 					</NavItem>
 					<NavItem>

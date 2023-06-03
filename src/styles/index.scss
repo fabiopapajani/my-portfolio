@@ -31,6 +31,12 @@ header {
 	.head-section {
 		padding: 20px 20px 0px;
 		text-align: center;
+		.logo-wrapper {
+			img {
+				max-width: fit-content;
+				width: 100%;
+			}
+		}
 	}
 }
 .super-wrapper {
@@ -40,6 +46,7 @@ header {
 footer {
 	border-top: 1px solid rgba(255, 255, 255, 0.4);
 	padding: 10px;
+	font-size: 14px;
 	/*
     bottom: 0;
     position: absolute;
@@ -56,119 +63,63 @@ footer a.my-email {
 	background-color: transparent !important;
 	border: 0 none;
 	margin-bottom: 0px;
+	font-size: 14px;
 	.navbar-collapse {
 		border: 0 none;
 		-webkit-box-shadow: 0 0 0 0 inset;
 		box-shadow: 0 0 0 0 inset;
+		margin-top: 5px;
 		.navbar-nav {
-			// display: inline-block;
-			// float: none;
 			margin: auto;
-			& > li > a {
-				color: #fff;
-				opacity: 0.5;
-				font-weight: bold;
-				padding: 15px 6px 3px;
-				margin-left: 9px;
-				margin-right: 9px;
-				border-bottom: 3px solid transparent;
-				text-align: center;
-				&:focus,
-				&:hover {
-					background-color: unset;
+			& > li {
+				display: flex;
+				justify-content: center;
+				margin: 5px 10px;
+				& > a {
 					color: #fff;
-					opacity: 1;
-					border-bottom-color: #fff;
+					opacity: 0.5;
+					font-weight: bold;
+					padding: 0px 6px;
+					border-bottom: 2px solid transparent;
+					&:focus,
+					&:hover {
+						background-color: unset;
+						color: #fff;
+						opacity: 1;
+						border-bottom-color: #fff;
+					}
 				}
-				// .navbar-main .navbar-nav > .active > a,
-				// .navbar-main .navbar-nav > .active > a:focus,
-				// .navbar-main .navbar-nav > .active > a:hover {
-				// 	color: #fff;
-				// 	opacity: 1;
-				// 	border-bottom-color: #fff;
-				// 	background-color: unset;
-				// }
+				&.active {
+					a,
+					a:focus,
+					a:hover {
+						color: #fff;
+						opacity: 1;
+						border-bottom-color: #fff;
+						background-color: unset;
+					}
+				}
 			}
 		}
 	}
 	.navbar-toggler {
-		float: none;
-		margin-left: auto;
-		margin-right: auto;
+		margin: auto;
 		border: 2px solid transparent !important;
 		border-radius: 0;
+		padding: 3px;
 		&-icon {
-			border: 2px solid transparent !important;
-			border-radius: 0;
-			// background-color: #fff;
-			// height: 3px;
-			// background-image: var(
-			// 	"data:image/svg+xml,<svg='http://www.w3.org/2000/svg'viewBox='003030'><pathstroke='rgba(255,255,255,0.55)'stroke-linecap='round'stroke-miterlimit='10'stroke-width='2'd='M47h22M415h22M423h22'/></svg>"
-			// );
-			// svg {
-			// 	fill: red;
-      //   color: red
-			// }
+			width: 30px;
+			height: 27px;
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='3' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 		}
 		&:focus,
 		&:hover {
 			border-color: #fff !important;
 			background-color: unset;
+			box-shadow: none;
 		}
 	}
 }
-// .navbar-main .navbar-header .navbar-toggle {
-// 	float: none;
-// 	margin-left: auto;
-// 	margin-right: auto;
-// 	border: 2px solid transparent !important;
-// 	border-radius: 0;
-// }
-
-// .navbar-main .navbar-toggle:focus,
-// .navbar-main .navbar-toggle:hover {
-// 	border-color: #fff !important;
-// 	background-color: unset;
-// }
-// .navbar-main .navbar-header .navbar-toggle .icon-bar {
-// 	background-color: #fff;
-// 	border-radius: 0;
-// 	height: 3px;
-// }
-// .navbar-main #navbar {
-// 	border: 0 none;
-// 	-webkit-box-shadow: 0 0 0 0 inset;
-// 	box-shadow: 0 0 0 0 inset;
-// }
-
-// .navbar-main #navbar .navbar-nav {
-// 	display: inline-block;
-// 	float: none;
-// }
-// .navbar-main .navbar-nav > li > a {
-// 	color: #fff;
-// 	opacity: 0.5;
-// 	font-weight: bold;
-// 	padding: 15px 6px 3px;
-// 	margin-left: 9px;
-// 	margin-right: 9px;
-// 	border-bottom: 3px solid transparent;
-// }
-// .navbar-main .navbar-nav > li > a:focus,
-// .navbar-main .navbar-nav > li > a:hover {
-// 	background-color: unset;
-// 	color: #fff;
-// 	opacity: 1;
-// 	border-bottom-color: #fff;
-// }
-// .navbar-main .navbar-nav > .active > a,
-// .navbar-main .navbar-nav > .active > a:focus,
-// .navbar-main .navbar-nav > .active > a:hover {
-// 	color: #fff;
-// 	opacity: 1;
-// 	border-bottom-color: #fff;
-// 	background-color: unset;
-// }
 /*-----------------------------------*/
 
 /*------------- Helpers -------------*/
