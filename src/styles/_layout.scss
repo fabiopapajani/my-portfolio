@@ -1,5 +1,8 @@
 body {
 	background-color: $background-color;
+	main {
+		min-height: calc(100vh - 231px);
+	}
 }
 /*----------------------*/
 header,

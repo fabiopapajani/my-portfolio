@@ -1,8 +1,8 @@
 @import './variables';
 @import './layout';
+@import './components';
 
-/*------------- Helpers -------------*/
-// .centred {
+/*------------- Helpers -------------*/ // .centred {
 // 	margin-left: auto;
 // 	margin-right: auto;
 // 	float: none;
@@ -46,8 +46,8 @@
 	}
 }
 @media only screen and (min-width: 992px) {
-	.page-home footer {
-		margin-top: 30px;
+	.page-home main .container {
+		margin-bottom: 30px;
 	}
 }
 /*-----------------------------------*/
