@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import { Modal, Image } from 'sveltestrap/src';
+	import { Modal, ModalBody, Image, Button } from 'sveltestrap/src';
 	import type { ImageItem } from './types';
+	import type { ModalProps } from 'sveltestrap/src/Modal';
 
 	export let image: ImageItem;
+	export let header: ModalProps['header'] = undefined;
+	export let description: string = '';
 
 	const dispatch = createEventDispatcher();
 
@@ -24,26 +27,29 @@
 
 <svelte:body on:keydown={onkeydown} />
 
-<Modal class="image-preview-modal" {isOpen} {toggle} size="xl" centered on:closing>
-	<div on:keydown={onkeydown}>
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<div
+<Modal class="image-preview-modal" {header} {isOpen} {toggle} size="xl" centered on:closing>
+	<div class="image-preview-container">
+		<Button
+			color="link"
 			class="swipe-action swipe-action--left"
 			on:click={() => {
 				dispatch('prev');
-			}}
+			}}><i class="fa-solid fa-chevron-left" /></Button
 		>
-			<i class="fa-solid fa-chevron-left" />
-		</div>
-		<Image thumbnail src={image.url} />
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<div
+		<Image fluid src={image.url} />
+		<Button
+			color="link"
 			class="swipe-action swipe-action--right"
 			on:click={() => {
 				dispatch('next');
-			}}
+			}}><i class="fa-solid fa-chevron-right" /></Button
 		>
-			<i class="fa-solid fa-chevron-right" />
-		</div>
 	</div>
+	<ModalBody>
+		{#if description}
+			<p class="description">
+				{description}
+			</p>
+		{/if}
+	</ModalBody>
 </Modal>

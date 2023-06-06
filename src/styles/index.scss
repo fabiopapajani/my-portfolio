@@ -156,9 +156,10 @@
 /*-----------------------------------*/
 /*------------ Contact --------------*/
 .page-contact {
-	#main {
-		padding-top: 20px;
-		padding-bottom: 20px;
+	.contact-data {
+		p > strong {
+			min-width: 200px;
+		}
 	}
 	#contact-form input,
 	#contact-form textarea,
