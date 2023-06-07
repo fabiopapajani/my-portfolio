@@ -1,8 +1,31 @@
 .image-preview-modal {
+	.modal-header {
+		.modal-title {
+			width: 100%;
+			[slot='header'] {
+				width: 100%;
+				display: inline-block;
+				position: relative;
+				.title {
+					width: 100%;
+					display: inline-block;
+					text-align: center;
+				}
+				small {
+					position: absolute;
+					bottom: -15px;
+					left: 0;
+					font-size: 14px;
+					color: #363636;
+				}
+			}
+		}
+	}
 	.image-preview-container {
 		user-select: none;
 		position: relative;
 		padding: 5px;
+
 		.swipe-action {
 			position: absolute;
 			top: calc(50% - 23px);

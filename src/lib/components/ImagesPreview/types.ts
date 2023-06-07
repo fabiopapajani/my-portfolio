@@ -9,4 +9,5 @@ export interface ImagePreviewModalProps {
 export type ImageItem = {
 	url: string;
 	title?: string;
+	description?: string;
 };

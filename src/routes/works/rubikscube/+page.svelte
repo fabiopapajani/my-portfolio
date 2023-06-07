@@ -13,6 +13,10 @@
 				<i class="fa fa-external-link" />
 			</a>
 		</h1>
+		<p>
+			Rubik's Cube is my first website made from scratch. Starting with blueprint & desing
+			continuing with development & testing and finaly feeling the pleasure of my achievement.
+		</p>
 		<ImagesPreviewList {images} />
 	</Col>
 </Container>

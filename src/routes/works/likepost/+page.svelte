@@ -13,6 +13,10 @@
 				<i class="fa fa-external-link" />
 			</a>
 		</h1>
+		<p>
+			Like-post.com is a shorten url website for making beauty facebook/twitter posts. Furthermore
+			it servers to post website that are not allowed to be posted (banned) from facebook/twitter.
+		</p>
 		<ImagesPreviewList {images} />
 	</Col>
 </Container>

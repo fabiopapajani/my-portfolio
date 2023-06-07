@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import { Modal, ModalBody, Image, Button } from 'sveltestrap/src';
+	import { Modal, ModalHeader, ModalBody, Image, Button } from 'sveltestrap/src';
 	import type { ImageItem } from './types';
 	import type { ModalProps } from 'sveltestrap/src/Modal';
 
 	export let image: ImageItem;
-	export let header: ModalProps['header'] = undefined;
+	export let header: ModalProps['header'] | HTMLElement = undefined;
+	export let title: string | HTMLElement = '';
 	export let description: string = '';
 
 	const dispatch = createEventDispatcher();
@@ -27,7 +28,10 @@
 
 <svelte:body on:keydown={onkeydown} />
 
-<Modal class="image-preview-modal" {header} {isOpen} {toggle} size="xl" centered on:closing>
+<Modal class="image-preview-modal" {isOpen} {toggle} size="xl" centered on:closing>
+	<ModalHeader {toggle}>
+		<slot name="header" />
+	</ModalHeader>
 	<div class="image-preview-container">
 		<Button
 			color="link"
