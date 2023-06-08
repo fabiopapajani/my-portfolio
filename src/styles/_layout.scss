@@ -1,7 +1,7 @@
 body {
 	background-color: $background-color;
 	main {
-		min-height: calc(100vh - 231px);
+		min-height: calc(100vh - 255px);
 	}
 }
 /*----------------------*/
@@ -36,7 +36,8 @@ header {
 		text-align: center;
 		.logo-wrapper {
 			img {
-				max-width: fit-content;
+				// max-width: fit-content;
+				max-width: 600px;
 				width: 100%;
 			}
 		}

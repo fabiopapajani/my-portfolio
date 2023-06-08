@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'sveltestrap/src';
 	import { page } from '$app/stores';
-	import logo from '$lib/images/logo.svg';
+	import logo from '$lib/images/logo3.svg';
 	import '../styles/index.scss';
 
 	let isOpen = false;
@@ -35,7 +35,7 @@
 						<NavLink href="/">WHAT I DO</NavLink>
 					</NavItem>
 					<NavItem active={pageName === 'page-works'}>
-						<NavLink href="/works">MY WORK</NavLink>
+						<NavLink href="/works">WORKS</NavLink>
 					</NavItem>
 					<NavItem active={pageName === 'page-skills'}>
 						<NavLink href="/skills">SKILLS</NavLink>

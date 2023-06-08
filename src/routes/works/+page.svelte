@@ -1,12 +1,29 @@
 <script lang="ts">
 	import { Container } from 'sveltestrap/src';
 	import ProjectItem from './ProjectItem.svelte';
-	// import lemonThumbnail from '$lib/images/lemon/thumbs/1_450x255.png';
-	// import likepostThumbnail from '$lib/images/likepost/thumbs/1_450x255.png';
-	// import rubikscubeThumbnail from '$lib/images/rubikscube/thumbs/1_450x255.png';
 </script>
 
 <Container>
+	<ProjectItem
+		title="BITREEL.COM"
+		externalUrl="https://www.bitreel.com"
+		readMoreUrl="works/bitreel"
+		image="/uploads/bitreel/thumbs/1_500x383.png"
+	>
+		Bitreel.com is a platform for creating virtual showrooms/products in 3D for luxury merchandising
+		companies. So they can accessed by browser also from VR.
+	</ProjectItem>
+	<hr class="style-seven" />
+	<ProjectItem
+		title="THEOPTIMIZER.COM"
+		externalUrl="https://theoptimizer.io"
+		readMoreUrl="works/theoptimizer"
+		image="/uploads/theoptimizer/thumbs/1_900x510.png"
+	>
+		Theoptimizer.com is a platform for automatic bidding, automatic placement blocking, global
+		blacklists/whitelists, bulk campaign creator, real time reporting and much more.
+	</ProjectItem>
+	<hr class="style-seven" />
 	<ProjectItem
 		title="LEMON.AL"
 		externalUrl="https://lemon.al"
