@@ -1,276 +1,73 @@
 <script lang="ts">
-	import { Container, Row, Col } from 'sveltestrap/src';
+	import { Container, Row, Col, Label } from 'sveltestrap/src';
+	import { RatingStarsList } from '$lib/components/RatingStars';
 </script>
 
 <Container>
 	<Row>
 		<Col sm={6} class="text-center">
 			<h3>FRONT-END</h3>
-			<ul class="list-unstyled">
-				<li class="skill-rate-row">
-					<span class="title">HTML <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">CSS <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">JAVASCRIPT <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">VUE JS <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">JQUERY <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">AJAX <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">SASS, LESS <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">BOOTSTRAP <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">SEO <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-regular fa-star" />
-					</span>
-				</li>
-			</ul>
+			<RatingStarsList
+				ratingList={[
+					{ label: 'REACT JS', stars: 5 },
+					{ label: 'VUE JS', stars: 5 },
+					{ label: 'SVELTE', stars: 3 },
+					{ label: 'GRAPHQL', stars: 5 },
+					{ label: 'REDUX', stars: 5 },
+					{ label: 'TYPESCRIPT', stars: 5 },
+					{ label: 'JAVASCRIPT', stars: 5 },
+					{ label: 'HTML & CSS', stars: 5 },
+					{ label: 'SASS, LESS', stars: 5 },
+					{ label: 'JQUERY', stars: 5 },
+					{ label: 'BABYLON JS', stars: 2 }
+				]}
+			/>
 			<br />
-			<h3>DESIGN</h3>
-			<ul class="list-unstyled">
-				<li class="skill-rate-row">
-					<span class="title">PHOTOSHOP <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-regular fa-star" />
-						<i class="fa-regular fa-star" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">FIREWORKS <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-regular fa-star" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">GIMP <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-regular fa-star" />
-					</span>
-				</li>
-			</ul>
+			<!-- <h3>DESIGN</h3> -->
+			<!-- <RatingStarsList
+				ratingList={[
+					{ label: 'HTML', stars: 5 },
+					{ label: 'SASS, LESS', stars: 5 },
+					{ label: 'JAVASCRIPT', stars: 5 },
+					{ label: 'VUE JS', stars: 5 },
+					{ label: 'REACT JS', stars: 5 },
+					{ label: 'JQUERY', stars: 5 },
+					{ label: 'GRAPHQL', stars: 5 }
+				]}
+			/> -->
 		</Col>
 		<Col sm={6} class="text-center">
 			<h3>BACK-END</h3>
-			<ul class="list-unstyled">
-				<li class="skill-rate-row">
-					<span class="title">NODE.JS <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">PHP <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">MYSQL <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">POSTGRESQL <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">CODEIGNITER <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">SYMFONY <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">WORDPRESS <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-regular fa-star" />
-						<i class="fa-regular fa-star" />
-					</span>
-				</li>
-			</ul>
+			<RatingStarsList
+				ratingList={[
+					{ label: 'NODE.JS', stars: 5 },
+					{ label: 'NEST JS', stars: 3 },
+					{ label: 'HAPI JS', stars: 5 },
+					{ label: 'EXPRESS JS', stars: 5 },
+					{ label: 'PHP', stars: 5 },
+					{ label: 'MYSQL', stars: 5 },
+					{ label: 'POSTGRESQL', stars: 5 },
+					{ label: 'MONGO DB', stars: 5 },
+					{ label: 'CODEIGNITER', stars: 5 },
+					{ label: 'SYMFONY', stars: 5 },
+					{ label: 'REDIS', stars: 5 },
+					{ label: 'RABBIT MQ', stars: 5 },
+					{ label: 'MOSQUITTO', stars: 5 }
+				]}
+			/>
 			<br />
 			<h3>OTHER</h3>
-			<ul class="list-unstyled">
-				<li class="skill-rate-row">
-					<span class="title">LINUX <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">GIT <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-regular fa-star" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">DOCKER <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-regular fa-star" />
-						<i class="fa-regular fa-star" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">BASH <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-regular fa-star" />
-						<i class="fa-regular fa-star" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">NGINX <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-regular fa-star" />
-						<i class="fa-regular fa-star" />
-					</span>
-				</li>
-				<li class="skill-rate-row">
-					<span class="title">APACHE <i class="fa fa-arrow-right pull-right" /></span>
-					<span class="starts">
-						<i class="fa-solid fa-star on" />
-						<i class="fa-solid fa-star on" />
-						<i class="fa-regular fa-star" />
-						<i class="fa-regular fa-star" />
-						<i class="fa-regular fa-star" />
-					</span>
-				</li>
-			</ul>
+			<RatingStarsList
+				ratingList={[
+					{ label: 'PUPPETEER', stars: 5 },
+					{ label: 'LINUX', stars: 5 },
+					{ label: 'GIT', stars: 5 },
+					{ label: 'DOCKER', stars: 4 },
+					{ label: 'BASH', stars: 3 },
+					{ label: 'NGINX', stars: 3 },
+					{ label: 'APACHE', stars: 2 }
+				]}
+			/>
 		</Col>
 	</Row>
 </Container>

@@ -15,6 +15,16 @@
 	</ProjectItem>
 	<hr class="style-seven" />
 	<ProjectItem
+		title="AGREED.IO"
+		externalUrl="https://www.agreed.io"
+		readMoreUrl="works/agreed"
+		image="/uploads/agreed/thumbs/1_821x483.webp"
+	>
+		Making lots of valuable decisions is easier than you think. Agreed guides everyone to transform
+		good ideas into reliable business cases with validated risks, costs & benefits.
+	</ProjectItem>
+	<hr class="style-seven" />
+	<ProjectItem
 		title="THEOPTIMIZER.COM"
 		externalUrl="https://theoptimizer.io"
 		readMoreUrl="works/theoptimizer"
