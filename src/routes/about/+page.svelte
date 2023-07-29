@@ -7,9 +7,10 @@
 		<Col md={4} id="about_me">
 			<h1 class="text-center">About me</h1>
 			<p class="description">
-				I am a web developer with good knowledge of Front-End and Back-End techniques. I love web
-				application engineering, modularizing code, and good performance. I love spending time on
-				fixing little details and optimizing web applications. Also I like working in a team.
+				I am a passionate and highly skilled Senior Software Engineer with over 10 years of
+				experience in the full software development cycle. I love engineering, innovations,
+				modularizing code, and good performance. I find great satisfaction in mentoring and guiding
+				junior developers.
 			</p>
 		</Col>
 		<Col md={4} class="text-center">
@@ -46,7 +47,7 @@
 		<Row>
 			<Col md={4}>
 				<h4>Bitreel</h4>
-				<p class="experience-period">Dec. 2022 - Present</p>
+				<p class="experience-period">Dec. 2022 - July 2023</p>
 			</Col>
 			<Col md={8}>
 				<p>
@@ -66,8 +67,8 @@
 			<Col md={8}>
 				<p>
 					<b>Senior Software Engineer</b> <br />
-					I've worked in team as front-end developer most of the time, developing complex platforms
-					for business needs.
+					I've worked in team as front-end developer most of the time, developing complex platforms for
+					business needs.
 					<br /><i class="fa fa-link" />
 					<a target="_blank" href="https://motomtech.com">motomtech.com</a>
 				</p>
